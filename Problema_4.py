@@ -1,15 +1,13 @@
-def calcular_imc(peso, altura):
+def pregunta_4(peso: int, altura: float) -> str:
     """
-    Calcula el Índice de Masa Corporal (IMC) y lo clasifica según la OMS.
-    
-    Parámetros:
-    peso (float): Peso en kilogramos.
-    altura (float): Altura en metros.
-    
+    Parametros:
+    peso (float): Peso en kilogramos (kg).
+    altura (float): Altura en metros (m).
     Retorna:
-    str: La categoría del IMC.
+    str : La categoria del IMC segun la OMS.
     """
-    imc = peso / (altura ** 2)
+    imc = peso / (altura * altura)
+
     if imc < 18.5:
         return "Bajo peso"
     elif imc < 25:
@@ -18,9 +16,3 @@ def calcular_imc(peso, altura):
         return "Sobrepeso"
     else:
         return "Obesidad"
-
-if __name__ == "__main__":
-    peso = float(input("Introduce el peso en kg: "))
-    altura = float(input("Introduce la altura en metros: "))
-    categoria = calcular_imc(peso, altura)
-    print(f"La categoría del IMC es: {categoria}")

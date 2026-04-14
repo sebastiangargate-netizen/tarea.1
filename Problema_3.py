@@ -1,12 +1,9 @@
-def clasificar_edad(edad):
+def pregunta_3(edad: int) -> str:
     """
-    Clasifica la edad de una persona según los criterios dados.
-    
-    Parámetros:
-    edad (int): La edad de la persona (0-120).
-    
+    Parametros:
+    edad (int): Edad de la persona.
     Retorna:
-    str: La categoría correspondiente.
+    str: Clasificacion de la edad.
     """
     if edad < 13:
         return "Menor"
@@ -16,8 +13,4 @@ def clasificar_edad(edad):
         return "Adulto"
     else:
         return "Adulto Mayor"
-
-if __name__ == "__main__":
-    edad = int(input("Introduce la edad: "))
-    categoria = clasificar_edad(edad)
-    print(f"La categoría es: {categoria}")
+    
